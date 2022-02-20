@@ -14,6 +14,17 @@ Tried initially using `KMeans` from the `Cluster` module to model the data.
 
 Overall this is not an accurate method and properly matches the test and predicted targets < 20% of the time. For example, a test got a sum of 50 targets *correct*, which is 9.54 % of the test data size. 
 
-Running this process 1000 times, here is a histogram to show the distribution of the sum of *correct* target assignments.
+Running this process 1000 times, here is a histogram to show the distribution of the percent of *correct* target assignments.
 
-![histogram_correct_targets_KMeans](KMeans_correct_counts.png "Frequency of correct targets from 1000 runs of the model")
+![histogram_correct_targets_KMeans](KMeans_correct_counts.png "Frequency of correct targets from 1000 runs of the Cluster model")
+
+Obviously, there is room for improvement.
+
+## Predicting target with Support Vector Classification (SVC)
+Using the `SVC` algorithm from the `svm` module.
+
+This method has significantly higher accuracy. For example, one test corrected assigned the target value 98.5% of the time.
+
+Running this process 1000 times, here is a histogram to show the distribution of the percent of *correct* target assignments.
+
+![histogram_correct_targets_SVC](SVC_correct_counts.png "Frequency of correct targets from 1000 runs of the SVC model")
