@@ -12,7 +12,9 @@ My first attempts at handling the data were to lower the dimensionallity of it u
 ## Predicting target with Cluster and KMeans
 Tried initially using `KMeans` from the `Cluster` module to model the data. 
 
-Overall this is not an accurate method and properly matches the test and predicted targets < 20% of the time. For example, a test got a sum of 50 targets *correct*, which is 9.54 % of the test data size. 
+Overall this is not an accurate method and properly matches the test and predicted targets < 20% of the time. For example, a test got a sum of 50 targets *correct*, which is 9.54 % of the test data size. Here is a heatmap to show the counts for the actual target value vs. the predicted value using KMeans:
+
+![counts_map_KMeans](counts_KMeans.png)
 
 Running this process 1000 times, here is a histogram to show the distribution of the percent of *correct* target assignments.
 
@@ -23,7 +25,9 @@ Obviously, there is room for improvement.
 ## Predicting target with Support Vector Classification (SVC)
 Using the `SVC` algorithm from the `svm` module.
 
-This method has significantly higher accuracy. For example, one test corrected assigned the target value 98.5% of the time.
+This method has significantly higher accuracy. For example, one test corrected assigned the target value 98.5% of the time. Here is a heatmap to show the counts for the actual target value vs. the predicted value using SVC:
+
+![counts_map_SVC](counts_SVC.png)
 
 Running this process 1000 times, here is a histogram to show the distribution of the percent of *correct* target assignments.
 
